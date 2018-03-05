@@ -19,7 +19,7 @@ class CreateProductPricesTable extends Migration
           $table->integer('product_id')->unsigned()->index();
           $table->foreign('product_id')->references('id')->on('products');
           //FK:products
-          $table->integer('price');
+          $table->decimal('price', 8, 2);
           $table->timestamps();
         });
     }

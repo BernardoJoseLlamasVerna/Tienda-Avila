@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
           $table->increments('id');
           $table->string('name_product')->nullable();
           $table->string('description')->nullable();
+          $table->string('image', 300);
           $table->integer('units_on_stock');
           $table->timestamps();
           $table->softDeletes();
