@@ -25,7 +25,7 @@ class CreateOrdersTable extends Migration
           $table->string('address_delivery');
           $table->string('postcode_delivery');
           $table->string('province_delivery');
-          $table->integer('price');
+          $table->decimal('price', 8, 2);
           $table->timestamps();
           $table->softDeletes();
         });
