@@ -19,6 +19,13 @@ class StoreController extends Controller
         return view('store.index', compact('products'));
     }
 
+    public function show($name_product)
+    {
+        $product = Product::where('name_product', $name_product)->first();
+        //dd($products);
+        return view('store.show', compact('product'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -46,10 +53,6 @@ class StoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
